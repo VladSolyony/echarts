@@ -51,8 +51,8 @@ const Table: FC<TTableProps> = ({rawHeadersData, rawTableData}) => {
             <div style={{ height: '100%', width: '100%' }} className="ag-theme-alpine">
                 <AgGridReact
                     animateRows
+                    rowGroupPanelShow={'always'}
                     defaultColDef={defaultColDef}
-                    domLayout='autoHeight'
                     rowData={rowData}
                     autoGroupColumnDef={autoGroupColumnDef}
                     columnDefs={getNormalizedTableHeaders(rawHeadersData)}
